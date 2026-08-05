@@ -1,0 +1,51 @@
+.header{
+background:#0F766E;
+padding:18px 0;
+color:white;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+}
+
+.menu{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.menu a{
+color:white;
+font-weight:bold;
+}
+
+.hero{
+padding:70px 0;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+color:#0F766E;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+}
+
+.footer{
+margin-top:80px;
+background:#0F766E;
+color:white;
+padding:30px;
+text-align:center;
+}
