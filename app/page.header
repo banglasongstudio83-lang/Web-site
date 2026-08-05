@@ -1,0 +1,30 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+
+      <main className="container">
+
+        <section className="hero">
+
+          <h1>
+            👶 শিশু ও পরিবার বিষয়ক বাংলা ব্লগ
+          </h1>
+
+          <p>
+            শিশু, মা, পরিবার, পুষ্টি ও
+            প্যারেন্টিং সম্পর্কিত
+            নির্ভরযোগ্য তথ্য।
+          </p>
+
+        </section>
+
+      </main>
+
+      <Footer />
+    </>
+  );
+}
