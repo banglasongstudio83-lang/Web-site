@@ -70,22 +70,26 @@ const categories = [
   "Baby Care",
   "Pregnancy",
   "Parenting",
-  "Family Life",
   "Health Tips",
+  "Family Life",
 ];
 
-const recentPosts = [
+const latestPosts = [
   {
-    title: "10 Baby Care Tips for New Parents",
-    slug: "/posts/baby-care-tips",
+    title: "নবজাতকের যত্ন নেওয়ার ১০টি উপায়",
+    slug: "#",
   },
   {
-    title: "Healthy Foods During Pregnancy",
-    slug: "/posts/pregnancy-foods",
+    title: "গর্ভাবস্থায় স্বাস্থ্যকর খাবার",
+    slug: "#",
   },
   {
-    title: "How to Build a Happy Family",
-    slug: "/posts/happy-family",
+    title: "শিশুর ঘুম কেন গুরুত্বপূর্ণ?",
+    slug: "#",
+  },
+  {
+    title: "পরিবারে সুখী পরিবেশ তৈরির উপায়",
+    slug: "#",
   },
 ];
 
@@ -93,12 +97,25 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="widget">
-        <h3>Categories</h3>
+        <h3>📂 Categories</h3>
+
         <ul>
-          {categories.map((category) => (
-            <li key={category}>
-              <Link href={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}>
-                {category}
+          {categories.map((item) => (
+            <li key={item}>
+              <Link href="#">{item}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="widget">
+        <h3>📰 Latest Articles</h3>
+
+        <ul>
+          {latestPosts.map((post) => (
+            <li key={post.title}>
+              <Link href={post.slug}>
+                {post.title}
               </Link>
             </li>
           ))}
@@ -106,18 +123,8 @@ export default function Sidebar() {
       </div>
 
       <div className="widget">
-        <h3>Recent Posts</h3>
-        <ul>
-          {recentPosts.map((post) => (
-            <li key={post.slug}>
-              <Link href={post.slug}>{post.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="widget">
         <h3>Advertisement</h3>
+
         <div className="ads-box">
           Google AdSense
           <br />
