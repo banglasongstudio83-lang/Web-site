@@ -63,3 +63,67 @@ Google AdSense
 );
 
 }
+import Link from "next/link";
+import "./Sidebar.css";
+
+const categories = [
+  "Baby Care",
+  "Pregnancy",
+  "Parenting",
+  "Family Life",
+  "Health Tips",
+];
+
+const recentPosts = [
+  {
+    title: "10 Baby Care Tips for New Parents",
+    slug: "/posts/baby-care-tips",
+  },
+  {
+    title: "Healthy Foods During Pregnancy",
+    slug: "/posts/pregnancy-foods",
+  },
+  {
+    title: "How to Build a Happy Family",
+    slug: "/posts/happy-family",
+  },
+];
+
+export default function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <div className="widget">
+        <h3>Categories</h3>
+        <ul>
+          {categories.map((category) => (
+            <li key={category}>
+              <Link href={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}>
+                {category}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="widget">
+        <h3>Recent Posts</h3>
+        <ul>
+          {recentPosts.map((post) => (
+            <li key={post.slug}>
+              <Link href={post.slug}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="widget">
+        <h3>Advertisement</h3>
+        <div className="ads-box">
+          Google AdSense
+          <br />
+          300 × 250
+        </div>
+      </div>
+    </aside>
+  );
+}
