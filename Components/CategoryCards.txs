@@ -1,0 +1,67 @@
+const categories = [
+  {
+    id:1,
+    icon:"👶",
+    title:"শিশুর যত্ন"
+  },
+  {
+    id:2,
+    icon:"🍼",
+    title:"শিশুর খাবার"
+  },
+  {
+    id:3,
+    icon:"👩",
+    title:"মায়ের স্বাস্থ্য"
+  },
+  {
+    id:4,
+    icon:"👨‍👩‍👧",
+    title:"পরিবার"
+  },
+  {
+    id:5,
+    icon:"🎓",
+    title:"শিশুর শিক্ষা"
+  },
+  {
+    id:6,
+    icon:"🍎",
+    title:"পুষ্টি"
+  }
+];
+
+export default function CategoryCards(){
+
+return(
+
+<section className="category">
+
+<h2>📂 বিভাগসমূহ</h2>
+
+<div className="category-grid">
+
+{
+categories.map(category=>(
+
+<div className="category-card"
+key={category.id}>
+
+<div className="category-icon">
+{category.icon}
+</div>
+
+<h3>{category.title}</h3>
+
+</div>
+
+))
+}
+
+</div>
+
+</section>
+
+);
+
+}
