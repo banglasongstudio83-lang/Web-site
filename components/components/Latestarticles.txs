@@ -1,73 +1,4 @@
-const articles = [
-  {
-    id: 1,
-    title: "শিশুর প্রথম ৬ মাসের খাবার গাইড",
-    author: "Admin",
-    date: "৫ আগস্ট ২০২৬",
-    image: "https://picsum.photos/600/350?11",
-    description:
-      "৬ মাস পূর্ণ হওয়ার পর শিশুকে কীভাবে ধীরে ধীরে পরিপূরক খাবার শুরু করবেন তা জানুন।"
-  },
-  {
-    id: 2,
-    title: "নবজাতকের ঘুম কেন গুরুত্বপূর্ণ?",
-    author: "Admin",
-    date: "৪ আগস্ট ২০২৬",
-    image: "https://picsum.photos/600/350?12",
-    description:
-      "নবজাতকের সুস্থ বৃদ্ধি ও মস্তিষ্কের বিকাশে পর্যাপ্ত ঘুমের ভূমিকা।"
-  },
-  {
-    id: 3,
-    title: "নতুন বাবা-মায়ের জন্য ১০টি পরামর্শ",
-    author: "Admin",
-    date: "৩ আগস্ট ২০২৬",
-    image: "https://picsum.photos/600/350?13",
-    description:
-      "প্রথমবার বাবা-মা হলে যেসব বিষয় জানা থাকলে শিশুর যত্ন নেওয়া সহজ হয়।"
-  }
-];
-
-export default function LatestArticles() {
-  return (
-    <section className="latest">
-
-      <h2>📰 সর্বশেষ প্রকাশিত</h2>
-
-      {articles.map((article) => (
-
-        <article className="article-card" key={article.id}>
-
-          <img
-            src={article.image}
-            alt={article.title}
-          />
-
-          <div className="article-content">
-
-            <h3>{article.title}</h3>
-
-            <small>
-              ✍️ {article.author} |
-              📅 {article.date}
-            </small>
-
-            <p>{article.description}</p>
-
-            <button>
-              Read More
-            </button>
-
-          </div>
-
-        </article>
-
-      ))}
-
-    </section>
-  );
-}
-import Link from "next/link";
+import PostCard from "./PostCard";
 
 const articles = [
   {
@@ -76,8 +7,9 @@ const articles = [
     excerpt:
       "নবজাতকের সঠিক যত্ন, ঘুম, গোসল এবং নিরাপদ পরিবেশ সম্পর্কে গুরুত্বপূর্ণ পরামর্শ।",
     image: "https://placehold.co/600x400",
-    date: "05 Aug 2026",
     category: "Baby Care",
+    date: "05 Aug 2026",
+    slug: "#",
   },
   {
     id: 2,
@@ -85,8 +17,9 @@ const articles = [
     excerpt:
       "মা ও শিশুর সুস্থতার জন্য কোন খাবারগুলো বেশি উপকারী তা জেনে নিন।",
     image: "https://placehold.co/600x400",
-    date: "04 Aug 2026",
     category: "Pregnancy",
+    date: "04 Aug 2026",
+    slug: "#",
   },
   {
     id: 3,
@@ -94,8 +27,9 @@ const articles = [
     excerpt:
       "শিশুর শারীরিক ও মানসিক বিকাশে পর্যাপ্ত ঘুমের ভূমিকা।",
     image: "https://placehold.co/600x400",
-    date: "03 Aug 2026",
     category: "Parenting",
+    date: "03 Aug 2026",
+    slug: "#",
   },
 ];
 
@@ -106,21 +40,15 @@ export default function LatestArticles() {
 
       <div className="articles-grid">
         {articles.map((article) => (
-          <article key={article.id} className="article-card">
-            <img src={article.image} alt={article.title} />
-
-            <div className="article-content">
-              <span className="category">{article.category}</span>
-
-              <h3>{article.title}</h3>
-
-              <p>{article.excerpt}</p>
-
-              <small>{article.date}</small>
-
-              <Link href="#">Read More →</Link>
-            </div>
-          </article>
+          <PostCard
+            key={article.id}
+            title={article.title}
+            excerpt={article.excerpt}
+            image={article.image}
+            category={article.category}
+            date={article.date}
+            slug={article.slug}
+          />
         ))}
       </div>
     </section>
