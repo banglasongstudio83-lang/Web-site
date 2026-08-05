@@ -33,6 +33,7 @@ export default function PostCard({
         <br />
 
         <Link href={slug}>Read More →</Link>
+        <Link href={slug}>Read More →</Link>
       </div>
     </article>
   );
