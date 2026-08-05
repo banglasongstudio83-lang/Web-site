@@ -4,6 +4,7 @@ import SearchBox from "@/components/SearchBox";
 import FeaturedPosts from "@/components/FeaturedPosts";
 import CategoryCards from "@/components/CategoryCards";
 import LatestArticles from "@/components/LatestArticles";
+import Sidebar from "@/components/Sidebar";
 export default function Home() {
   return (
     <>
