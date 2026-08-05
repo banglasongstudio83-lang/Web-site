@@ -48,6 +48,9 @@ export default function LatestArticles() {
             category={article.category}
             date={article.date}
             slug={article.slug}
+slug: "/post/baby-care-tips"
+slug: "/post/pregnancy-foods"
+slug: "/post/baby-sleep"
           />
         ))}
       </div>
