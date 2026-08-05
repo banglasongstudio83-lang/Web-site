@@ -24,6 +24,7 @@ export default function Home() {
         <div className="content-layout">
           <div className="main-content">
             <FeaturedPosts />
+            <LatestArticles />
           </div>
 
           <Sidebar />
