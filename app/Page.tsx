@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SearchBox from "@/components/SearchBox";
 import FeaturedPosts from "@/components/FeaturedPosts";
 import Sidebar from "@/components/Sidebar";
-
+import LatestArticles from "@/components/LatestArticles";
 export default function Home() {
   return (
     <>
