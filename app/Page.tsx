@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SearchBox from "@/components/SearchBox";
 import FeaturedPosts from "@/components/FeaturedPosts";
 import CategoryCards from "@/components/CategoryCards";
-
+import LatestArticles from "@/components/LatestArticles";
 export default function Home() {
   return (
     <>
@@ -24,7 +24,7 @@ export default function Home() {
 
         <FeaturedPosts />
         <CategoryCards />
-
+        <LatestArticles />
       </main>
 
       <Footer />
